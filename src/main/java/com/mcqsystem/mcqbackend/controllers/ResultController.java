@@ -1,12 +1,10 @@
 package com.mcqsystem.mcqbackend.controllers;
-
 import lombok.RequiredArgsConstructor;
 import com.mcqsystem.mcqbackend.entities.Answer;
 import com.mcqsystem.mcqbackend.entities.Result;
 import com.mcqsystem.mcqbackend.services.ResultService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -25,6 +23,13 @@ public class ResultController {
                 result.getScore()
         );
         return ResponseEntity.ok(savedResult);
+    }
+
+    @GetMapping("/{resultId}")
+    public ResponseEntity<Result> getResultById(@PathVariable Long resultId) {
+        return resultService.getResultById(resultId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping("/user/{userId}")
