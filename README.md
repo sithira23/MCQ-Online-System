@@ -1,312 +1,167 @@
-<div align="left" style="position: relative;">
-<img src="https://img.icons8.com/?size=512&id=55494&format=png" align="right" width="30%" style="margin: -20px 0 0 20px;">
-<h1>MCQ-ONLINE-SYSTEM</h1>
-<p align="left">
-	<em><code>❯ REPLACE-ME</code></em>
-</p>
-<p align="left">
-	<!-- Shields.io badges disabled, using skill icons. --></p>
-<p align="left">Built with the tools and technologies:</p>
-<p align="left">
-	<a href="https://skillicons.dev">
-		<img src="https://skillicons.dev/icons?i=java,md">
-	</a></p>
-</div>
-<br clear="right">
+<div align="left" style="position: relative;"> <img src="https://img.icons8.com/?size=512&id=55494&format=png" align="right" width="30%" style="margin: -20px 0 0 20px;"> <h1>MCQ Online System</h1> <p align="left"> <em><code>❯ A Spring Boot based Online MCQ Examination System for internship assignment</code></em> </p> <p align="left">Built with the tools and technologies:</p> <p align="left"> <a href="https://skillicons.dev"> <img src="https://skillicons.dev/icons?i=java,spring,mysql,maven,postman"> </a></p> </div> <br clear="right"> <details><summary>Table of Contents</summary>
+📍 Overview
+👾 Features
+📁 Project Structure
+🚀 Getting Started
+☑️ Prerequisites
+⚙️ Installation
+🤖 Usage
+🧪 Testing
+📋 API Endpoints
+📌 Sample Data
+🔰 Contributing
+🎗 License
+</details> <hr>
+📍 Overview
+The MCQ Online System is a backend application built with Spring Boot that allows students to take multiple choice question (MCQ) exams online. This project was developed as part of an internship assignment to demonstrate ability to build functional REST APIs with proper database integration.
 
-<details><summary>Table of Contents</summary>
+Key Features:
 
-- [📍 Overview](#-overview)
-- [👾 Features](#-features)
-- [📁 Project Structure](#-project-structure)
-  - [📂 Project Index](#-project-index)
-- [🚀 Getting Started](#-getting-started)
-  - [☑️ Prerequisites](#-prerequisites)
-  - [⚙️ Installation](#-installation)
-  - [🤖 Usage](#🤖-usage)
-  - [🧪 Testing](#🧪-testing)
-- [📌 Project Roadmap](#-project-roadmap)
-- [🔰 Contributing](#-contributing)
-- [🎗 License](#-license)
-- [🙌 Acknowledgments](#-acknowledgments)
-
-</details>
-<hr>
-
-## 📍 Overview
-
-<code>❯ REPLACE-ME</code>
-
----
-
-## 👾 Features
-
-<code>❯ REPLACE-ME</code>
-
----
-
-## 📁 Project Structure
-
-```sh
+User authentication system (mock login)
+Display available exam papers
+MCQ question management
+Answer submission and result tracking
+MySQL database integration
+RESTful API architecture
+👾 Features
+🔐 User Management: Mock login system with predefined users
+📚 Exam Management: Display 3 sample MCQ exam papers (Java, Spring Boot, Database)
+❓ Question System: 5 MCQs per exam with multiple choice options
+📊 Result Tracking: Save and retrieve exam results with scoring
+🗄️ Database Integration: MySQL database with proper entity relationships
+🔧 REST APIs: Complete CRUD operations via RESTful endpoints
+📄 Sample Data: Pre-loaded with sample users, exams, and questions
+📮 Postman Collection: Ready-to-use API collection for testing
+📁 Project Structure
 └── MCQ-Online-System/
-    ├── pom.xml
-    └── src
-        └── main
-```
+    ├── pom.xml                                 # Maven dependencies
+    ├── src/main/
+    │   ├── java/com/mcqsystem/mcqbackend/
+    │   │   ├── McqBackendApplication.java      # Main Spring Boot application
+    │   │   ├── DataInitializer.java            # Sample data loader
+    │   │   ├── controllers/                    # REST API controllers
+    │   │   │   ├── UserController.java         # User authentication APIs
+    │   │   │   ├── ExamController.java         # Exam management APIs
+    │   │   │   ├── QuestionController.java     # Question retrieval APIs
+    │   │   │   └── ResultController.java       # Result management APIs
+    │   │   ├── entities/                       # JPA entity classes
+    │   │   │   ├── User.java                   # User entity
+    │   │   │   ├── Exam.java                   # Exam entity
+    │   │   │   ├── Question.java               # Question entity
+    │   │   │   ├── Result.java                 # Result entity
+    │   │   │   └── Answer.java                 # Answer entity
+    │   │   ├── repositories/                   # Data access layer
+    │   │   │   ├── UserRepository.java
+    │   │   │   ├── ExamRepository.java
+    │   │   │   ├── QuestionRepository.java
+    │   │   │   ├── ResultRepository.java
+    │   │   │   └── AnswerRepository.java
+    │   │   └── services/                       # Business logic layer
+    │   │       ├── UserService.java
+    │   │       ├── ExamService.java
+    │   │       ├── QuestionService.java
+    │   │       └── ResultService.java
+    │   └── resources/
+    │       └── application.properties          # Database configuration
+    └── README.md
+🚀 Getting Started
+☑️ Prerequisites
+Before getting started with MCQ Online System, ensure your runtime environment meets the following requirements:
 
+Java: Version 17 or higher
+Maven: Version 3.6 or higher
+MySQL: Version 5.7 or higher (XAMPP recommended)
+IDE: IntelliJ IDEA (recommended) or any Java IDE
+⚙️ Installation
+Clone the repository:
+git clone https://github.com/sithira23/MCQ-Online-System
+cd MCQ-Online-System
+Set up the database:
 
-### 📂 Project Index
-<details open>
-	<summary><b><code>MCQ-ONLINE-SYSTEM/</code></b></summary>
-	<details> <!-- __root__ Submodule -->
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<table>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- src Submodule -->
-		<summary><b>src</b></summary>
-		<blockquote>
-			<details>
-				<summary><b>main</b></summary>
-				<blockquote>
-					<details>
-						<summary><b>java</b></summary>
-						<blockquote>
-							<details>
-								<summary><b>com</b></summary>
-								<blockquote>
-									<details>
-										<summary><b>mcqsystem</b></summary>
-										<blockquote>
-											<details>
-												<summary><b>mcqbackend</b></summary>
-												<blockquote>
-													<table>
-													<tr>
-														<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/DataInitializer.java'>DataInitializer.java</a></b></td>
-														<td><code>❯ REPLACE-ME</code></td>
-													</tr>
-													<tr>
-														<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/McqBackendApplication.java'>McqBackendApplication.java</a></b></td>
-														<td><code>❯ REPLACE-ME</code></td>
-													</tr>
-													</table>
-													<details>
-														<summary><b>controllers</b></summary>
-														<blockquote>
-															<table>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/controllers/ResultController.java'>ResultController.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/controllers/QuestionController.java'>QuestionController.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/controllers/ExamController.java'>ExamController.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/controllers/UserController.java'>UserController.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															</table>
-														</blockquote>
-													</details>
-													<details>
-														<summary><b>entities</b></summary>
-														<blockquote>
-															<table>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/entities/Question.java'>Question.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/entities/Exam.java'>Exam.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/entities/Answer.java'>Answer.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/entities/User.java'>User.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/entities/Result.java'>Result.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															</table>
-														</blockquote>
-													</details>
-													<details>
-														<summary><b>services</b></summary>
-														<blockquote>
-															<table>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/services/ExamService.java'>ExamService.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/services/ResultService.java'>ResultService.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/services/QuestionService.java'>QuestionService.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/services/UserService.java'>UserService.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															</table>
-														</blockquote>
-													</details>
-													<details>
-														<summary><b>repositories</b></summary>
-														<blockquote>
-															<table>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/repositories/ResultRepository.java'>ResultRepository.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/repositories/ExamRepository.java'>ExamRepository.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/repositories/AnswerRepository.java'>AnswerRepository.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/repositories/UserRepository.java'>UserRepository.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															<tr>
-																<td><b><a href='https://github.com/sithira23/MCQ-Online-System/blob/master/src/main/java/com/mcqsystem/mcqbackend/repositories/QuestionRepository.java'>QuestionRepository.java</a></b></td>
-																<td><code>❯ REPLACE-ME</code></td>
-															</tr>
-															</table>
-														</blockquote>
-													</details>
-												</blockquote>
-											</details>
-										</blockquote>
-									</details>
-								</blockquote>
-							</details>
-						</blockquote>
-					</details>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-</details>
+Start XAMPP and run Apache + MySQL
+Open phpMyAdmin (http://localhost/phpmyadmin)
+Create a new database called mcq_system
+Configure database connection: Update src/main/resources/application.properties if needed:
 
----
-## 🚀 Getting Started
+spring.datasource.url=jdbc:mysql://localhost:3306/mcq_system
+spring.datasource.username=root
+spring.datasource.password=
+Install dependencies:
 
-### ☑️ Prerequisites
+mvn clean install
+🤖 Usage
+Run the application:
+mvn spring-boot:run
+The application will start on: http://localhost:8005
 
-Before getting started with MCQ-Online-System, ensure your runtime environment meets the following requirements:
+Database tables and sample data will be created automatically on first run
 
-- **Programming Language:** Java
+🧪 Testing
+Option 1: Using Browser
 
+Test GET endpoints directly: http://localhost:8005/api/exams
+Option 2: Using Postman
 
-### ⚙️ Installation
+Import the provided Postman collection
+Test all API endpoints with sample data
+Option 3: Using cURL
 
-Install MCQ-Online-System using one of the following methods:
+# Get all exams
+curl -X GET http://localhost:8005/api/exams
 
-**Build from source:**
+# Login test
+curl -X POST http://localhost:8005/api/users/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"john@example.com","password":"password123"}'
+📋 API Endpoints
+👤 User Management
+POST /api/users/login - User login
+POST /api/users/register - User registration
+📚 Exam Management
+GET /api/exams - Get all available exams
+GET /api/exams/{id} - Get specific exam details
+POST /api/exams - Create new exam
+❓ Question Management
+GET /api/questions/exam/{examId} - Get questions for specific exam
+POST /api/questions - Add new question
+📊 Result Management
+POST /api/results - Submit exam results
+GET /api/results/user/{userId} - Get user's results
+GET /api/results/{resultId} - Get specific result details
+GET /api/results/{resultId}/answers - Get detailed answers
+📌 Sample Data
+The application comes pre-loaded with:
 
-1. Clone the MCQ-Online-System repository:
-```sh
-❯ git clone https://github.com/sithira23/MCQ-Online-System
-```
+👥 Sample Users:
 
-2. Navigate to the project directory:
-```sh
-❯ cd MCQ-Online-System
-```
+john@example.com / password123
+jane@example.com / password123
+📚 Sample Exams:
 
-3. Install the project dependencies:
+Java Basics - Basic Java programming concepts
+Spring Boot Fundamentals - Introduction to Spring Boot framework
+Database Concepts - Basic database and SQL concepts
+❓ Sample Questions:
 
-echo 'INSERT-INSTALL-COMMAND-HERE'
+5 MCQs per exam (15 total)
+Each question has 4 options (A, B, C, D)
+Covers topics: Java fundamentals, Spring Boot basics, Database concepts
+🔰 Contributing
+💬 Join the Discussions: Share your insights, provide feedback, or ask questions.
+🐛 Report Issues: Submit bugs found or log feature requests for the MCQ-Online-System project.
+💡 Submit Pull Requests: Review open PRs, and submit your own PRs.
+🎗 License
+This project is protected under the MIT License. For more details, refer to the LICENSE file.
 
+Assignment Completion Status: ✅ COMPLETE
 
-
-### 🤖 Usage
-Run MCQ-Online-System using the following command:
-echo 'INSERT-RUN-COMMAND-HERE'
-
-### 🧪 Testing
-Run the test suite using the following command:
-echo 'INSERT-TEST-COMMAND-HERE'
-
----
-## 📌 Project Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
----
-
-## 🔰 Contributing
-
-- **💬 [Join the Discussions](https://github.com/sithira23/MCQ-Online-System/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/sithira23/MCQ-Online-System/issues)**: Submit bugs found or log feature requests for the `MCQ-Online-System` project.
-- **💡 [Submit Pull Requests](https://github.com/sithira23/MCQ-Online-System/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-
-<details closed>
-<summary>Contributing Guidelines</summary>
-
-1. **Fork the Repository**: Start by forking the project repository to your github account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
-   git clone https://github.com/sithira23/MCQ-Online-System
-   ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to github**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
-
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://github.com{/sithira23/MCQ-Online-System/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=sithira23/MCQ-Online-System">
-   </a>
-</p>
-</details>
-
----
-
-## 🎗 License
-
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-## 🙌 Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
----
+✅ Spring Boot backend implementation
+✅ MySQL database integration
+✅ REST API endpoints
+✅ Entity relationships (Users, Exams, Questions, Results, Answers)
+✅ Sample data initialization
+✅ Login functionality (mock)
+✅ Exam paper listing
+✅ MCQ management (5 questions per exam)
+✅ Result tracking system
+✅ Postman collection for API testing
