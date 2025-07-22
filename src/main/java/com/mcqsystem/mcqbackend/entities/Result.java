@@ -1,4 +1,4 @@
-package org.example.entities;
+package com.mcqsystem.mcqbackend.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

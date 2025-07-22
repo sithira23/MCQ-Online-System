@@ -1,6 +1,6 @@
-package org.example.repositories;
+package com.mcqsystem.mcqbackend.repositories;
 
-import org.example.entities.Result;
+import com.mcqsystem.mcqbackend.entities.Result;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

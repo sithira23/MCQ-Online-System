@@ -1,10 +1,10 @@
-package org.example.services;
+package com.mcqsystem.mcqbackend.services;
 
 import lombok.RequiredArgsConstructor;
-import org.example.entities.Answer;
-import org.example.entities.Result;
-import org.example.repositories.AnswerRepository;
-import org.example.repositories.ResultRepository;
+import com.mcqsystem.mcqbackend.entities.Answer;
+import com.mcqsystem.mcqbackend.entities.Result;
+import com.mcqsystem.mcqbackend.repositories.AnswerRepository;
+import com.mcqsystem.mcqbackend.repositories.ResultRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

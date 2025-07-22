@@ -1,8 +1,8 @@
-package org.example.services;
+package com.mcqsystem.mcqbackend.services;
 
 import lombok.RequiredArgsConstructor;
-import org.example.entities.User;
-import org.example.repositories.UserRepository;
+import com.mcqsystem.mcqbackend.entities.User;
+import com.mcqsystem.mcqbackend.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

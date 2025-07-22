@@ -1,4 +1,5 @@
-package org.example.entities;
+package com.mcqsystem.mcqbackend.entities;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,22 +7,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "users")
+@Table(name = "exams")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-
+public class Exam {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String name;
+    private String title;
 
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    private String password;
-
+    private String description;
 }
